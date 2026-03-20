@@ -3,244 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesar Velazquez | Professional Resume</title>
-    <!-- Tailwind CSS via CDN -->
+    <title>Cesar Velazquez - Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter and Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- GSAP via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        h1, h2, h3 {
-            font-family: 'Outfit', sans-serif;
-        }
-        .reveal-up {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        .nav-link {
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover {
-            opacity: 0.6;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-white text-zinc-900 leading-relaxed selection:bg-zinc-900 selection:text-white">
+<body class="bg-gray-50 text-gray-900 font-sans antialiased p-4 md:p-12">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="font-semibold text-lg tracking-tight">Cesar Velazquez</span>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-zinc-500">
-                <a href="#summary" class="nav-link">Summary</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
+    <main class="max-w-4xl mx-auto bg-white p-10 md:p-16 rounded-xl shadow-sm opacity-0" id="resume-container">
+        
+        <header class="border-b border-gray-200 pb-8 mb-8">
+            <h1 class="text-4xl font-light tracking-tight text-gray-900 mb-2">Cesar Velazquez</h1>
+            <p class="text-xl text-gray-600 font-medium mb-2">Customer Care Professional & IT Support Specialist</p>
+            <p class="text-amber-600 font-medium mb-4 italic">I'm looking for part time until I receive a full time IT Support position.</p>
+            <div class="text-sm text-gray-500 flex flex-wrap gap-4">
+                <span>Houston, TX 77084</span>
+                <span>•</span>
+                <span>281-492-0651</span>
+                <span>•</span>
+                <span>velazcesar160@gmail.com</span>
             </div>
-        </div>
-    </nav>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="pt-40 pb-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 reveal-up" id="hero-title">
-                Problem Solver <br/>
-                <span class="text-zinc-400">AI Automation Expert</span>
-            </h1>
-            <p class="text-xl text-zinc-500 max-w-2xl reveal-up" id="hero-subtitle">
-                I help businesses scale through intelligent automation, combining a deep technical background in IT support with cutting-edge AI software engineering.
+        <section class="mb-10">
+            <h2 class="text-lg font-semibold text-gray-800 uppercase tracking-wider mb-3">Professional Summary</h2>
+            <p class="text-gray-600 leading-relaxed">
+                Communicative problem-solver with a strong foundation in high-volume customer care and complex regulatory compliance, having held over 30 state Property & Casualty licenses. Currently transitioning into IT Support, leveraging a lifelong proficiency with PC hardware building, diagnostics, and emerging technologies. Actively pursuing CompTIA certification to combine exceptional user de-escalation skills with enterprise-level technical troubleshooting.
             </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Summary Section -->
-    <section id="summary" class="py-20 px-6 bg-zinc-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6 reveal-up">Professional Summary</h2>
-            <p class="text-2xl md:text-3xl text-zinc-800 leading-snug reveal-up">
-                Results-driven founder of <span class="text-zinc-900 font-medium">Lumina Growth Agency</span>, focused on building enterprise-level lead generation infrastructure. I bridge the gap between complex IT support and high-performance AI solutions to drive measurable business impact.
+        <section class="mb-10">
+            <h2 class="text-lg font-semibold text-gray-800 uppercase tracking-wider mb-3">Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
+                <div>
+                    <p><strong>Customer & Operations:</strong> Active Listening, Conflict De-escalation, High-Volume Call Management, Multi-State Regulatory Compliance, CRM Navigation.</p>
+                </div>
+                <div>
+                    <p><strong>Technical & Hardware:</strong> PC Custom Builds & Diagnostics, Hardware Troubleshooting, Tech Systems Research, AI Prompt Engineering, Basic HTML/CSS.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-lg font-semibold text-gray-800 uppercase tracking-wider mb-4">Professional Experience</h2>
+            
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-gray-900 font-medium text-lg">Customer Service Representative (State Farm Account)</h3>
+                    <span class="text-gray-500 text-sm">08/2024 – 02/2026</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Everise - McGregor, TX (Remote)</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                    <li>Managed high-volume inbound inquiries across 48 states, ensuring timely and highly accurate resolutions.</li>
+                    <li>Maintained over 30 active Property & Casualty state licenses, strictly adhering to complex regional insurance regulations.</li>
+                    <li>Utilized enterprise CRM software to track interactions, process service requests, and enhance overall client satisfaction.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-gray-900 font-medium text-lg">Server & Hospitality Focus</h3>
+                    <span class="text-gray-500 text-sm">2020 – 2022</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Jimmy Changas / Randalls / Popeyes - Houston, TX</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                    <li>Thrived in fast-paced environments, managing rapid transactions, inventory, and point-of-sale hardware.</li>
+                    <li>Developed strong foundational skills in multitasking, team collaboration, and direct, patient customer communication.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-lg font-semibold text-gray-800 uppercase tracking-wider mb-3">Independent Technical Projects</h2>
+            <p class="text-gray-600 leading-relaxed text-sm">
+                <strong>Workflow Automation & Web Development:</strong> Passionate self-taught learner currently exploring AI systems and web technologies. Building logic-based prompt structures and custom single-file web applications to help small businesses automate workflows and capture missed opportunities. 
             </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-12 reveal-up">Experience</h2>
-            <div class="space-y-16">
-                <div class="reveal-up border-l-2 border-zinc-100 pl-8 relative">
-                    <div class="absolute w-3 h-3 bg-zinc-900 rounded-full -left-[7px] top-2"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-2xl font-semibold">Lumina Growth Agency</h3>
-                            <p class="text-zinc-500 font-medium">Founder & Principal Developer</p>
-                        </div>
-                        <span class="text-sm font-medium text-zinc-400 mt-2 md:mt-0">Jan 2025 — Present</span>
-                    </div>
-                    <ul class="space-y-3 text-zinc-600 max-w-3xl">
-                        <li>Built enterprise-grade SEO and lead generation infrastructure for modern growth agencies.</li>
-                        <li>Designed and deployed minimalist, high-impact landing pages inspired by clean, premium aesthetics.</li>
-                        <li>Leveraged AI Studio and Google Places API to automate complex business workflows.</li>
-                    </ul>
-                </div>
+        <section>
+            <h2 class="text-lg font-semibold text-gray-800 uppercase tracking-wider mb-4">Education & Certifications</h2>
+            <ul class="space-y-3 text-gray-600">
+                <li>
+                    <strong>CompTIA IT Support Certification</strong> (In Progress) <br>
+                    <span class="text-sm text-gray-500">Candidate via Texas Workforce Commission program</span>
+                </li>
+                <li>
+                    <strong>30+ Property & Casualty State Licenses</strong> <br>
+                    <span class="text-sm text-gray-500">Including active Texas P&C License</span>
+                </li>
+                <li>
+                    <strong>High School Diploma</strong> <br>
+                    <span class="text-sm text-gray-500">Mayde Creek High School - Houston, TX</span>
+                </li>
+            </ul>
+        </section>
 
-                <div class="reveal-up border-l-2 border-zinc-100 pl-8 relative">
-                    <div class="absolute w-3 h-3 bg-zinc-200 rounded-full -left-[7px] top-2"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-2xl font-semibold">LeadGen Pro 3.0</h3>
-                            <p class="text-zinc-500 font-medium">Lead Engineer (Open Source Project)</p>
-                        </div>
-                        <span class="text-sm font-medium text-zinc-400 mt-2 md:mt-0">2024 — 2025</span>
-                    </div>
-                    <ul class="space-y-3 text-zinc-600 max-w-3xl">
-                        <li>Developed a robust lead generation and enrichment platform using Angular and Firebase.</li>
-                        <li>Implemented "Zero Manual Intervention" (No-Manus) automation strategies using Gemini AI.</li>
-                        <li>Integrated Google Places and social profile extraction to create comprehensive lead datasets.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 bg-zinc-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-12 reveal-up">Key Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-zinc-100 reveal-up hover:border-zinc-300 transition-all">
-                    <h3 class="text-xl font-bold mb-3 italic">CRM Sniper</h3>
-                    <p class="text-zinc-600 mb-6">A powerful tool designed to "sniper" leads directly into CRMs with automated enrichment and validation.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Angular</span>
-                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Gemini AI</span>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-zinc-100 reveal-up hover:border-zinc-300 transition-all">
-                    <h3 class="text-xl font-bold mb-3">IT Support Specialist</h3>
-                    <p class="text-zinc-600 mb-6">Enterprise-grade PC hardware diagnostics and technical support infrastructure management.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Hardware</span>
-                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Support</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-12 reveal-up">Skills & expertise</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 reveal-up">
-                <div>
-                    <h4 class="font-bold mb-4">Automation</h4>
-                    <ul class="text-sm text-zinc-500 space-y-2">
-                        <li>Gemini AI</li>
-                        <li>Google Places API</li>
-                        <li>No-Manus Strategies</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Development</h4>
-                    <ul class="text-sm text-zinc-500 space-y-2">
-                        <li>Angular & React</li>
-                        <li>TypeScript</li>
-                        <li>Tailwind CSS</li>
-                        <li>GSAP Animation</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Infrastructure</h4>
-                    <ul class="text-sm text-zinc-500 space-y-2">
-                        <li>Firebase</li>
-                        <li>Google Cloud</li>
-                        <li>Git & GitHub</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Hardware</h4>
-                    <ul class="text-sm text-zinc-500 space-y-2">
-                        <li>PC Diagnostics</li>
-                        <li>IT Support</li>
-                        <li>Problem Solving</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="py-20 px-6 border-t border-zinc-100">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-zinc-400 text-sm">
-            <span>&copy; 2026 Cesar Velazquez. All rights reserved.</span>
-            <div class="flex gap-8 mt-6 md:mt-0">
-                <a href="mailto:velazcesar160@gmail.com" class="nav-link">Email</a>
-                <a href="https://github.com/MrWallyST" class="nav-link">GitHub</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- GSAP Script -->
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Initial animations
-        gsap.to(".reveal-up", {
+        gsap.to("#resume-container", {
             opacity: 1,
-            y: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".reveal-up",
-                start: "top 90%",
-                toggleActions: "play none none none"
-            }
-        });
-
-        // Hero title specific animation
-        gsap.from("#hero-title", {
-            opacity: 0,
-            y: 50,
+            y: -20,
             duration: 1.2,
-            ease: "power4.out"
-        });
-
-        // Continuous reveal on scroll
-        const reveals = document.querySelectorAll('.reveal-up');
-        reveals.forEach((el) => {
-            gsap.to(el, {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                }
-            });
-        });
-
-        // Smooth navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+            ease: "power3.out",
+            delay: 0.2
         });
     </script>
 </body>
