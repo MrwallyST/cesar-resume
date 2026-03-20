@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar Velazquez | Professional Resume</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 leading-relaxed selection:bg-zinc-900 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-semibold text-lg tracking-tight">Cesar Velazquez</span>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-zinc-500">
+                <a href="#summary" class="nav-link">Summary</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 reveal-up" id="hero-title">
+                Problem Solver <br/>
+                <span class="text-zinc-400">AI Automation Expert</span>
+            </h1>
+            <p class="text-xl text-zinc-500 max-w-2xl reveal-up" id="hero-subtitle">
+                I help businesses scale through intelligent automation, combining a deep technical background in IT support with cutting-edge AI software engineering.
+            </p>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-20 px-6 bg-zinc-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6 reveal-up">Professional Summary</h2>
+            <p class="text-2xl md:text-3xl text-zinc-800 leading-snug reveal-up">
+                Results-driven founder of <span class="text-zinc-900 font-medium">Lumina Growth Agency</span>, focused on building enterprise-level lead generation infrastructure. I bridge the gap between complex IT support and high-performance AI solutions to drive measurable business impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-12 reveal-up">Experience</h2>
+            <div class="space-y-16">
+                <div class="reveal-up border-l-2 border-zinc-100 pl-8 relative">
+                    <div class="absolute w-3 h-3 bg-zinc-900 rounded-full -left-[7px] top-2"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Lumina Growth Agency</h3>
+                            <p class="text-zinc-500 font-medium">Founder & Principal Developer</p>
+                        </div>
+                        <span class="text-sm font-medium text-zinc-400 mt-2 md:mt-0">Jan 2025 — Present</span>
+                    </div>
+                    <ul class="space-y-3 text-zinc-600 max-w-3xl">
+                        <li>Built enterprise-grade SEO and lead generation infrastructure for modern growth agencies.</li>
+                        <li>Designed and deployed minimalist, high-impact landing pages inspired by clean, premium aesthetics.</li>
+                        <li>Leveraged AI Studio and Google Places API to automate complex business workflows.</li>
+                    </ul>
+                </div>
+
+                <div class="reveal-up border-l-2 border-zinc-100 pl-8 relative">
+                    <div class="absolute w-3 h-3 bg-zinc-200 rounded-full -left-[7px] top-2"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold">LeadGen Pro 3.0</h3>
+                            <p class="text-zinc-500 font-medium">Lead Engineer (Open Source Project)</p>
+                        </div>
+                        <span class="text-sm font-medium text-zinc-400 mt-2 md:mt-0">2024 — 2025</span>
+                    </div>
+                    <ul class="space-y-3 text-zinc-600 max-w-3xl">
+                        <li>Developed a robust lead generation and enrichment platform using Angular and Firebase.</li>
+                        <li>Implemented "Zero Manual Intervention" (No-Manus) automation strategies using Gemini AI.</li>
+                        <li>Integrated Google Places and social profile extraction to create comprehensive lead datasets.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-zinc-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-12 reveal-up">Key Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-zinc-100 reveal-up hover:border-zinc-300 transition-all">
+                    <h3 class="text-xl font-bold mb-3 italic">CRM Sniper</h3>
+                    <p class="text-zinc-600 mb-6">A powerful tool designed to "sniper" leads directly into CRMs with automated enrichment and validation.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Angular</span>
+                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Gemini AI</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-zinc-100 reveal-up hover:border-zinc-300 transition-all">
+                    <h3 class="text-xl font-bold mb-3">IT Support Specialist</h3>
+                    <p class="text-zinc-600 mb-6">Enterprise-grade PC hardware diagnostics and technical support infrastructure management.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Hardware</span>
+                        <span class="px-3 py-1 bg-zinc-50 border border-zinc-100 rounded-full text-xs font-medium">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-12 reveal-up">Skills & expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 reveal-up">
+                <div>
+                    <h4 class="font-bold mb-4">Automation</h4>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li>Gemini AI</li>
+                        <li>Google Places API</li>
+                        <li>No-Manus Strategies</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Development</h4>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li>Angular & React</li>
+                        <li>TypeScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>GSAP Animation</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Infrastructure</h4>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li>Firebase</li>
+                        <li>Google Cloud</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Hardware</h4>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li>PC Diagnostics</li>
+                        <li>IT Support</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 px-6 border-t border-zinc-100">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-zinc-400 text-sm">
+            <span>&copy; 2026 Cesar Velazquez. All rights reserved.</span>
+            <div class="flex gap-8 mt-6 md:mt-0">
+                <a href="mailto:velazcesar160@gmail.com" class="nav-link">Email</a>
+                <a href="https://github.com/MrWallyST" class="nav-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Script -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initial animations
+        gsap.to(".reveal-up", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".reveal-up",
+                start: "top 90%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        // Hero title specific animation
+        gsap.from("#hero-title", {
+            opacity: 0,
+            y: 50,
+            duration: 1.2,
+            ease: "power4.out"
+        });
+
+        // Continuous reveal on scroll
+        const reveals = document.querySelectorAll('.reveal-up');
+        reveals.forEach((el) => {
+            gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+        // Smooth navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
