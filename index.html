@@ -40,8 +40,47 @@
 
         .gradient-text {
             background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Flowing Lines Animation */
+        .flow-line {
+            stroke-dasharray: 10;
+            stroke-dashoffset: 20;
+            animation: flow 1.5s linear infinite;
+            opacity: 0.1;
+            transition: opacity 0.5s ease;
+        }
+
+        .flow-line.active {
+            opacity: 1;
+            stroke: #3b82f6;
+        }
+
+        @keyframes flow {
+            from { stroke-dashoffset: 20; }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .node-glow {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .node-glow.active {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+            border-color: #3b82f6;
+            transform: scale(1.05);
+        }
+
+        .node-glow.active .node-icon {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .node-glow.active .node-text {
+            color: #1e293b;
         }
     </style>
 </head>
@@ -137,6 +176,59 @@
             </div>
         </section>
 
+        <section class="mb-12 section-hover border-l-4 border-transparent pl-6 py-2">
+            <h2 class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">Automation Logic Visualizer</h2>
+            <p class="text-slate-500 mb-8 text-sm max-w-lg font-medium">Interactive demonstration of an AI-driven lead generation workflow. (Click "Simulate Workflow" to see the logic in action)</p>
+            
+            <div class="relative bg-white/40 border border-slate-100 p-8 rounded-3xl overflow-hidden mb-8">
+                <!-- SVG Lines for Desktop -->
+                <svg class="absolute inset-0 pointer-events-none hidden md:block" viewBox="0 0 800 200" preserveAspectRatio="none" width="100%" height="100%">
+                    <path id="line-1-2" class="flow-line" d="M220 100 L380 100" fill="none" stroke="#cbd5e1" stroke-width="2" />
+                    <path id="line-2-3" class="flow-line" d="M540 100 L700 100" fill="none" stroke="#cbd5e1" stroke-width="2" />
+                </svg>
+
+                <!-- SVG Lines for Mobile -->
+                <svg class="absolute inset-0 pointer-events-none block md:hidden" viewBox="0 0 200 600" preserveAspectRatio="none" width="100%" height="100%">
+                    <path id="line-1-2-mobile" class="flow-line" d="M100 140 L100 220" fill="none" stroke="#cbd5e1" stroke-width="2" />
+                    <path id="line-2-3-mobile" class="flow-line" d="M100 380 L100 460" fill="none" stroke="#cbd5e1" stroke-width="2" />
+                </svg>
+
+                <div class="flex flex-col md:flex-row justify-between items-center gap-12 relative z-10 py-8">
+                    <!-- Node 1 -->
+                    <div id="node-1" class="node-glow bg-white border border-slate-200 p-6 rounded-2xl text-center w-full md:w-48 group">
+                        <div class="node-icon w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-slate-500 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                        </div>
+                        <h4 class="node-text text-sm font-bold text-slate-900 mb-1">Data Capture</h4>
+                        <p class="text-[10px] text-slate-500 font-medium leading-tight">Lead found via Automated Sniper</p>
+                    </div>
+
+                    <!-- Node 2 -->
+                    <div id="node-2" class="node-glow bg-white border border-slate-200 p-6 rounded-2xl text-center w-full md:w-48">
+                        <div class="node-icon w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-slate-500 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
+                        </div>
+                        <h4 class="node-text text-sm font-bold text-slate-900 mb-1">AI Orchestration</h4>
+                        <p class="text-[10px] text-slate-500 font-medium leading-tight">Gemini 1.5 Pro Enrichment</p>
+                    </div>
+
+                    <!-- Node 3 -->
+                    <div id="node-3" class="node-glow bg-white border border-slate-200 p-6 rounded-2xl text-center w-full md:w-48">
+                        <div class="node-icon w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-slate-500 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="node-text text-sm font-bold text-slate-900 mb-1">Value Delivery</h4>
+                        <p class="text-[10px] text-slate-500 font-medium leading-tight">Zero-Manual CRM Injection</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="simulate-btn" class="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white rounded-full font-bold text-sm transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 active:scale-95">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Simulate Workflow
+            </button>
+        </section>
+
         <section class="section-hover border-l-4 border-transparent pl-6 py-2">
             <h2 class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-6">Education & Certifications</h2>
             <ul class="space-y-4">
@@ -190,6 +282,55 @@
                 duration: 2,
                 ease: 'power1.out'
             });
+        });
+
+        // Automation Visualizer Logic
+        const simulateBtn = document.getElementById('simulate-btn');
+        const nodes = [
+            document.getElementById('node-1'),
+            document.getElementById('node-2'),
+            document.getElementById('node-3')
+        ];
+        const lines = [
+            document.getElementById('line-1-2'),
+            document.getElementById('line-2-3'),
+            document.getElementById('line-1-2-mobile'),
+            document.getElementById('line-2-3-mobile')
+        ];
+
+        let isAnimating = false;
+
+        simulateBtn.addEventListener('click', () => {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            simulateBtn.disabled = true;
+            simulateBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    isAnimating = false;
+                    simulateBtn.disabled = false;
+                    simulateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    
+                    // Cleanup after a delay
+                    gsap.delayedCall(2, () => {
+                        nodes.forEach(n => n.classList.remove('active'));
+                        lines.forEach(l => l.classList.remove('active'));
+                    });
+                }
+            });
+
+            // Initial state reset
+            nodes.forEach(n => n.classList.remove('active'));
+            lines.forEach(l => l.classList.remove('active'));
+
+            // Animation Sequence
+            tl.to(nodes[0], { duration: 0.5, onStart: () => nodes[0].classList.add('active') })
+              .to(lines[0], { duration: 0.8, onStart: () => lines[0].classList.add('active') }, "+=0.2")
+              .to(nodes[1], { duration: 0.5, onStart: () => nodes[1].classList.add('active') }, "-=0.2")
+              .to(lines[1], { duration: 0.8, onStart: () => lines[1].classList.add('active') }, "+=0.2")
+              .to(nodes[2], { duration: 0.5, onStart: () => nodes[2].classList.add('active') }, "-=0.2");
         });
     </script>
 </body>
